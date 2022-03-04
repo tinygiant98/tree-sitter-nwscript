@@ -51,6 +51,7 @@ module.exports = grammar({
 
     _top_level_item: $ => choice(
       $.declaration,
+      $.decoration,
       $._statement,
       $.struct_declarator,
       $.preproc_if,
@@ -294,7 +295,10 @@ module.exports = grammar({
       'effect',
       'itemproperty',
       'event',
-      'talent'
+      'talent',
+      'cassowary',
+      'json',
+      'action'
     )),
 
     nwnsc_macro: $ => token(prec(2,
@@ -711,7 +715,11 @@ module.exports = grammar({
     _field_identifier: $ => alias($.identifier, $.field_identifier),
     _statement_identifier: $ => alias($.identifier, $.statement_identifier),
 
+    //decoration: $ => token(/\/\/([\s]*@[\s]*[a-zA-Z_]\w*[\s]*\[?[a-zA-Z_]\w*[\s]*:?[\s]*[a-zA-Z_]\w*\]?)/gm),
+    //decoration: $ => token(seq('//', /([\s]*@[\s\S]*)/gm)),
+    decoration: $ => token(/(\/\/\s*@(\\(.|\r?\n)|[^\\\n])*)/),
     // http://stackoverflow.com/questions/13014947/regex-to-match-a-c-style-multiline-comment/36328890#36328890
+
     comment: $ => token(choice(
       seq('//', /(\\(.|\r?\n)|[^\\\n])*/),
       seq(
@@ -722,7 +730,7 @@ module.exports = grammar({
       prec(-1, seq(
         '/*',
         /([^╫]+)/
-      ))
+      )),
     )),
   },
 

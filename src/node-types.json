@@ -599,6 +599,10 @@
           "named": true
         },
         {
+          "type": "decoration",
+          "named": true
+        },
+        {
           "type": "function_definition",
           "named": true
         },
@@ -1389,6 +1393,10 @@
           "named": true
         },
         {
+          "type": "decoration",
+          "named": true
+        },
+        {
           "type": "field_declaration",
           "named": true
         },
@@ -1449,6 +1457,10 @@
         },
         {
           "type": "declaration",
+          "named": true
+        },
+        {
+          "type": "decoration",
           "named": true
         },
         {
@@ -1600,6 +1612,10 @@
           "named": true
         },
         {
+          "type": "decoration",
+          "named": true
+        },
+        {
           "type": "field_declaration",
           "named": true
         },
@@ -1685,6 +1701,10 @@
         },
         {
           "type": "declaration",
+          "named": true
+        },
+        {
+          "type": "decoration",
           "named": true
         },
         {
@@ -1899,6 +1919,10 @@
         },
         {
           "type": "declaration",
+          "named": true
+        },
+        {
+          "type": "decoration",
           "named": true
         },
         {
@@ -2302,6 +2326,10 @@
   {
     "type": "continue",
     "named": false
+  },
+  {
+    "type": "decoration",
+    "named": true
   },
   {
     "type": "default",

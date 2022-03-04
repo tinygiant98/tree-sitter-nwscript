@@ -18,6 +18,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "decoration"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_statement"
         },
         {
@@ -2184,6 +2188,18 @@
           {
             "type": "STRING",
             "value": "talent"
+          },
+          {
+            "type": "STRING",
+            "value": "cassowary"
+          },
+          {
+            "type": "STRING",
+            "value": "json"
+          },
+          {
+            "type": "STRING",
+            "value": "action"
           }
         ]
       }
@@ -4911,6 +4927,13 @@
       },
       "named": true,
       "value": "statement_identifier"
+    },
+    "decoration": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "(\\/\\/\\s*@(\\\\(.|\\r?\\n)|[^\\\\\\n])*)"
+      }
     },
     "comment": {
       "type": "TOKEN",

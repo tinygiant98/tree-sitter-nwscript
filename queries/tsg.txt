@@ -1,0 +1,22 @@
+
+(preproc_include file: (_) @include)
+{
+    node @include.source
+    node @include.sink
+    edge @include.source -> @include.sink
+    attr (@include.source) kind = "include"
+    attr (@include.source -> @include.sink) precedence = 10
+    
+}
+
+(nwn_type) @nwn
+{
+    node @nwn.node
+    attr (@nwn.node) kind = "nwn type"
+}
+
+(number_literal) @number
+{
+    node @number.node
+    attr(@number.node) kind = "number"
+}
